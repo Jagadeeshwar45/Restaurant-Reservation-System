@@ -149,6 +149,17 @@ stateDiagram-v2
     Cancel --> Cancelled: Cancel successful
     Cancel --> Error: Invalid code or no reservation
     Cancelled --> [*]
+
+    %% Style fixes for GitHub visibility
+    style Start fill:#4CAF50,color:#fff
+    style Search fill:#2196F3,color:#fff
+    style Results fill:#03A9F4,color:#fff
+    style CreateReservation fill:#FFC107,color:#000
+    style Confirmed fill:#8BC34A,color:#000
+    style Error fill:#F44336,color:#fff
+    style Cancel fill:#9C27B0,color:#fff
+    style Cancelled fill:#795548,color:#fff
+
 ```
 
 ## 💼 Business Strategy Summary
