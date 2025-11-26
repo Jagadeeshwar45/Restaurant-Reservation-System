@@ -4,7 +4,7 @@ AI-powered conversational restaurant reservation system using Llama-3.3-8B, Stre
 
 ## 🎥 Demo Video
 
-[🔗 Add your demo link after recording (Loom / YouTube / Google Drive)](https://youtu.be/XXXXXXXXXX)
+[🔗 Video Walk Through](https://youtu.be/XXXXXXXXXX)
 
 ## 🚀 Project Overview
 
@@ -27,7 +27,7 @@ flowchart TD
     B --> C[Llama-3.3-8B Model]
     C --> D[MCP Tool Router]
     D --> E[Reservation Tools]
-    E --> F[(SQLite DB)]
+    E --> F[SQLite DB]
 ```
 
 ### Key Features
@@ -88,8 +88,8 @@ Never include text outside JSON.
 ### 📁 Installation
 
 ```bash
-git clone <repository-url>
-cd GoodFoods-AI-Agent
+git clone https://github.com/Jagadeeshwar45/Restaurant-Reservation-System.git
+cd Restaurant-Reservation-System
 pip install -r requirements.txt
 ```
 
@@ -136,7 +136,20 @@ Cancel reservation at restaurant code 52
 
 ## ♟ State Transition Diagram
 
-![alt text](image.png)
+```mermaid
+stateDiagram-v2
+    [*] --> Start
+    Start --> Search: Ask user preference
+    Search --> Results: List matching restaurants
+    Results --> CreateReservation: User selects or requests booking
+    CreateReservation --> Confirmed: Reservation successful
+    CreateReservation --> Error: Slot unavailable
+    Error --> Search: Offer alternatives
+    Confirmed --> Cancel: User requests cancellation
+    Cancel --> Cancelled: Cancel successful
+    Cancel --> Error: Invalid code or no reservation
+    Cancelled --> [*]
+```
 
 ## 💼 Business Strategy Summary
 
