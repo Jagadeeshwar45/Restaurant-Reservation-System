@@ -1,0 +1,36 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+venv/
+.venv/
+r.venv/
+env/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/
+
+# Databases / runtime data
+data/*.db
+data/*.sqlite
+data/*.log
+
+# Model files (Llama etc.)
+models/
+*.gguf
+
+app/state_diagram.py

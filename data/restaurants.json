@@ -1,0 +1,938 @@
+[
+  {
+    "id": 1,
+    "name": "Soldier Bistro",
+    "address": "140 Mueller Gardens, Daveville, LA 23007",
+    "lat": 13.180588,
+    "lon": 77.564559,
+    "capacity": 20,
+    "cuisine": "American",
+    "features": [
+      "rooftop"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "GoodFoods Nelson",
+    "address": "1276 Burns Vista, Evansburgh, NM 63281",
+    "lat": 13.099904,
+    "lon": 77.718513,
+    "capacity": 60,
+    "cuisine": "Chinese",
+    "features": []
+  },
+  {
+    "id": 3,
+    "name": "GoodFoods Cruz",
+    "address": "74866 Castaneda Squares Apt. 587, Coryton, TN 49860",
+    "lat": 13.085966,
+    "lon": 77.462535,
+    "capacity": 120,
+    "cuisine": "French",
+    "features": [
+      "private_room",
+      "pet_friendly"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "GoodFoods Henderson",
+    "address": "63211 Samantha Square, Allisonfurt, OK 34081",
+    "lat": 13.084781,
+    "lon": 77.711239,
+    "capacity": 20,
+    "cuisine": "Japanese",
+    "features": [
+      "parking"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "GoodFoods Higgins",
+    "address": "20331 Richard Knolls, Sheastad, ME 32140",
+    "lat": 12.928537,
+    "lon": 77.520368,
+    "capacity": 80,
+    "cuisine": "Korean",
+    "features": []
+  },
+  {
+    "id": 6,
+    "name": "Effort Bistro",
+    "address": "4019 Frank Square, Joville, IN 75971",
+    "lat": 13.175364,
+    "lon": 77.665445,
+    "capacity": 20,
+    "cuisine": "Mexican",
+    "features": []
+  },
+  {
+    "id": 7,
+    "name": "Size Bistro",
+    "address": "97047 Hicks Mall Suite 300, Johnstonville, FM 82906",
+    "lat": 13.018085,
+    "lon": 77.734591,
+    "capacity": 80,
+    "cuisine": "French",
+    "features": [
+      "live_music",
+      "parking"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Mother Bistro",
+    "address": "02976 John Turnpike, Stephenton, KY 95950",
+    "lat": 12.992761,
+    "lon": 77.520664,
+    "capacity": 80,
+    "cuisine": "Indian",
+    "features": []
+  },
+  {
+    "id": 9,
+    "name": "GoodFoods Peters",
+    "address": "PSC 0195, Box 6144, APO AA 50711",
+    "lat": 13.1155,
+    "lon": 77.613808,
+    "capacity": 200,
+    "cuisine": "Italian",
+    "features": [
+      "outdoor",
+      "rooftop"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "GoodFoods Wolfe",
+    "address": "81741 Cowan Hills Apt. 454, Annahaven, PW 50411",
+    "lat": 12.924462,
+    "lon": 77.52768,
+    "capacity": 40,
+    "cuisine": "Korean",
+    "features": [
+      "live_music"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "GoodFoods Patton",
+    "address": "93708 Cory Parkways, South Greg, MI 81367",
+    "lat": 13.078417,
+    "lon": 77.59342,
+    "capacity": 60,
+    "cuisine": "Mediterranean",
+    "features": []
+  },
+  {
+    "id": 12,
+    "name": "GoodFoods Morris",
+    "address": "51398 Ricky Stravenue, Curtisview, WI 09307",
+    "lat": 12.964,
+    "lon": 77.55266,
+    "capacity": 60,
+    "cuisine": "Thai",
+    "features": [
+      "rooftop",
+      "parking"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Born Bistro",
+    "address": "48468 Troy Summit, New Williefurt, GU 36690",
+    "lat": 13.097718,
+    "lon": 77.668531,
+    "capacity": 120,
+    "cuisine": "French",
+    "features": []
+  },
+  {
+    "id": 14,
+    "name": "GoodFoods Hamilton",
+    "address": "590 Matthew Glen Apt. 945, Cynthiamouth, MT 50805",
+    "lat": 13.172764,
+    "lon": 77.736836,
+    "capacity": 200,
+    "cuisine": "French",
+    "features": [
+      "live_music"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "GoodFoods Rowe",
+    "address": "23725 Elizabeth Point Suite 549, Lake Timothyside, OK 08325",
+    "lat": 13.156477,
+    "lon": 77.580738,
+    "capacity": 200,
+    "cuisine": "Korean",
+    "features": [
+      "live_music",
+      "private_room"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "GoodFoods Edwards",
+    "address": "8256 Campbell Parks Suite 795, Hoodport, MH 19917",
+    "lat": 13.12965,
+    "lon": 77.600619,
+    "capacity": 20,
+    "cuisine": "Indian",
+    "features": [
+      "live_music",
+      "pet_friendly"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "GoodFoods Robinson",
+    "address": "37307 Sarah Pass Suite 099, Nelsonmouth, FM 21860",
+    "lat": 13.178526,
+    "lon": 77.71719,
+    "capacity": 40,
+    "cuisine": "Japanese",
+    "features": [
+      "live_music",
+      "parking"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "GoodFoods Garcia",
+    "address": "506 Gordon Isle Apt. 306, Jonesshire, AS 06565",
+    "lat": 12.918799,
+    "lon": 77.481083,
+    "capacity": 20,
+    "cuisine": "Korean",
+    "features": [
+      "live_music"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "GoodFoods Armstrong",
+    "address": "6916 Anna Ramp Suite 433, Lake Melissa, AR 49892",
+    "lat": 12.940109,
+    "lon": 77.515225,
+    "capacity": 40,
+    "cuisine": "Italian",
+    "features": [
+      "live_music",
+      "pet_friendly"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Card Bistro",
+    "address": "11544 Williams Street Suite 185, Mendezstad, NV 01536",
+    "lat": 13.079827,
+    "lon": 77.69409,
+    "capacity": 200,
+    "cuisine": "American",
+    "features": [
+      "parking",
+      "live_music"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "GoodFoods Johns",
+    "address": "350 Nichole Estates, North Coryview, IA 23623",
+    "lat": 13.03356,
+    "lon": 77.660745,
+    "capacity": 30,
+    "cuisine": "Japanese",
+    "features": [
+      "live_music",
+      "outdoor"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Now Bistro",
+    "address": "1090 Andrew Knoll, East Ianbury, SD 98977",
+    "lat": 13.133221,
+    "lon": 77.514332,
+    "capacity": 60,
+    "cuisine": "Japanese",
+    "features": [
+      "parking",
+      "private_room"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Care Bistro",
+    "address": "7206 Camacho Stravenue Suite 357, East Lisaview, WI 09599",
+    "lat": 13.196821,
+    "lon": 77.670945,
+    "capacity": 80,
+    "cuisine": "Italian",
+    "features": [
+      "private_room"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "GoodFoods Caldwell",
+    "address": "0204 Patricia Burgs Apt. 973, Daniellebury, AS 34785",
+    "lat": 12.90649,
+    "lon": 77.688919,
+    "capacity": 120,
+    "cuisine": "Mediterranean",
+    "features": [
+      "live_music"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "GoodFoods Owens",
+    "address": "PSC 3599, Box 4630, APO AE 20596",
+    "lat": 13.005921,
+    "lon": 77.569309,
+    "capacity": 200,
+    "cuisine": "Chinese",
+    "features": [
+      "outdoor"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "GoodFoods Hicks",
+    "address": "39239 Serrano Keys, Charlestown, KS 98879",
+    "lat": 13.002574,
+    "lon": 77.718148,
+    "capacity": 80,
+    "cuisine": "American",
+    "features": [
+      "pet_friendly",
+      "private_room"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "GoodFoods Schwartz",
+    "address": "1704 Riley Vista Apt. 885, Simmonsmouth, MN 85428",
+    "lat": 12.980118,
+    "lon": 77.501228,
+    "capacity": 200,
+    "cuisine": "Indian",
+    "features": [
+      "parking"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "GoodFoods Gilbert",
+    "address": "5666 Michele Dam Suite 486, Alecbury, CA 31958",
+    "lat": 12.956595,
+    "lon": 77.514127,
+    "capacity": 120,
+    "cuisine": "Thai",
+    "features": [
+      "parking"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Control Bistro",
+    "address": "688 Melanie Stravenue, Mooreland, AS 07189",
+    "lat": 13.167495,
+    "lon": 77.480156,
+    "capacity": 20,
+    "cuisine": "Mediterranean",
+    "features": []
+  },
+  {
+    "id": 30,
+    "name": "GoodFoods Aguilar",
+    "address": "3797 Kevin Union Apt. 926, Kennedyburgh, CA 22546",
+    "lat": 12.972373,
+    "lon": 77.628047,
+    "capacity": 60,
+    "cuisine": "Thai",
+    "features": []
+  },
+  {
+    "id": 31,
+    "name": "Keep Bistro",
+    "address": "189 Eric Harbors, Medinahaven, IA 24267",
+    "lat": 13.117423,
+    "lon": 77.474094,
+    "capacity": 80,
+    "cuisine": "Japanese",
+    "features": [
+      "private_room"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Job Bistro",
+    "address": "147 Garcia Shoals, Leeburgh, VI 58622",
+    "lat": 13.076672,
+    "lon": 77.618346,
+    "capacity": 80,
+    "cuisine": "Japanese",
+    "features": [
+      "parking"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "GoodFoods Scott",
+    "address": "PSC 5414, Box 0719, APO AA 58647",
+    "lat": 13.127551,
+    "lon": 77.684576,
+    "capacity": 60,
+    "cuisine": "Thai",
+    "features": []
+  },
+  {
+    "id": 34,
+    "name": "GoodFoods Skinner",
+    "address": "85399 Morgan Vista Apt. 455, Salinaston, CO 61528",
+    "lat": 12.920591,
+    "lon": 77.680725,
+    "capacity": 200,
+    "cuisine": "Korean",
+    "features": []
+  },
+  {
+    "id": 35,
+    "name": "Wrong Bistro",
+    "address": "USS Collins, FPO AP 16521",
+    "lat": 12.904466,
+    "lon": 77.477859,
+    "capacity": 60,
+    "cuisine": "Chinese",
+    "features": [
+      "live_music",
+      "rooftop"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Teacher Bistro",
+    "address": "873 Christian Circles Suite 753, East Catherine, WV 55099",
+    "lat": 13.053964,
+    "lon": 77.46927,
+    "capacity": 120,
+    "cuisine": "American",
+    "features": [
+      "pet_friendly"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "GoodFoods Martinez",
+    "address": "328 David Forks Suite 626, Gouldton, MO 35492",
+    "lat": 13.038566,
+    "lon": 77.495868,
+    "capacity": 20,
+    "cuisine": "Indian",
+    "features": [
+      "pet_friendly"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Region Bistro",
+    "address": "2597 Rubio Point, Port Dorothymouth, FL 77739",
+    "lat": 13.032899,
+    "lon": 77.456431,
+    "capacity": 120,
+    "cuisine": "Indian",
+    "features": []
+  },
+  {
+    "id": 39,
+    "name": "Realize Bistro",
+    "address": "352 Martinez Square, Hardinbury, ID 82470",
+    "lat": 12.958574,
+    "lon": 77.583152,
+    "capacity": 20,
+    "cuisine": "Indian",
+    "features": [
+      "private_room",
+      "live_music"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Current Bistro",
+    "address": "28405 Sawyer Field, West Elizabethhaven, AZ 22389",
+    "lat": 12.971696,
+    "lon": 77.532861,
+    "capacity": 20,
+    "cuisine": "Mexican",
+    "features": []
+  },
+  {
+    "id": 41,
+    "name": "GoodFoods Bishop",
+    "address": "66237 Richard Point, Boydchester, MP 97623",
+    "lat": 12.90856,
+    "lon": 77.722626,
+    "capacity": 80,
+    "cuisine": "American",
+    "features": [
+      "live_music"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Different Bistro",
+    "address": "PSC 6595, Box 4477, APO AA 91109",
+    "lat": 12.971645,
+    "lon": 77.553498,
+    "capacity": 80,
+    "cuisine": "Korean",
+    "features": []
+  },
+  {
+    "id": 43,
+    "name": "GoodFoods Padilla",
+    "address": "795 Ashley Track Apt. 949, Alishamouth, NY 24457",
+    "lat": 13.078784,
+    "lon": 77.483995,
+    "capacity": 30,
+    "cuisine": "American",
+    "features": [
+      "parking",
+      "rooftop"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "GoodFoods Mahoney",
+    "address": "4822 Maddox Valley, Markhaven, NV 77819",
+    "lat": 13.154149,
+    "lon": 77.632815,
+    "capacity": 60,
+    "cuisine": "Mexican",
+    "features": []
+  },
+  {
+    "id": 45,
+    "name": "GoodFoods Castillo",
+    "address": "405 Murphy Knolls Apt. 939, South Amandastad, CO 41957",
+    "lat": 13.121309,
+    "lon": 77.732285,
+    "capacity": 60,
+    "cuisine": "Chinese",
+    "features": [
+      "outdoor"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "GoodFoods Thomas",
+    "address": "11720 Velazquez Centers Apt. 229, Chrisbury, DE 17767",
+    "lat": 12.994166,
+    "lon": 77.538273,
+    "capacity": 80,
+    "cuisine": "Mediterranean",
+    "features": []
+  },
+  {
+    "id": 47,
+    "name": "GoodFoods Myers",
+    "address": "186 Brenda Creek Apt. 475, Hansonton, CT 14762",
+    "lat": 13.193894,
+    "lon": 77.562885,
+    "capacity": 80,
+    "cuisine": "Mediterranean",
+    "features": [
+      "rooftop",
+      "outdoor"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "GoodFoods Bush",
+    "address": "6959 Amanda Islands, North Emilytown, CA 92774",
+    "lat": 13.135259,
+    "lon": 77.668438,
+    "capacity": 200,
+    "cuisine": "Japanese",
+    "features": [
+      "parking",
+      "private_room"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "GoodFoods Fernandez",
+    "address": "568 White Island, Billytown, NJ 98935",
+    "lat": 13.142189,
+    "lon": 77.610611,
+    "capacity": 30,
+    "cuisine": "Indian",
+    "features": []
+  },
+  {
+    "id": 50,
+    "name": "GoodFoods Obrien",
+    "address": "0350 Jones Ranch Suite 339, South Kimberlychester, FM 23782",
+    "lat": 12.956027,
+    "lon": 77.5661,
+    "capacity": 60,
+    "cuisine": "Mexican",
+    "features": [
+      "parking",
+      "rooftop"
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Answer Bistro",
+    "address": "295 Foster Well Suite 012, West William, ND 90858",
+    "lat": 13.096147,
+    "lon": 77.526139,
+    "capacity": 30,
+    "cuisine": "Korean",
+    "features": [
+      "outdoor"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "GoodFoods Rasmussen",
+    "address": "73366 Simpson Way, West Brandonborough, CT 07153",
+    "lat": 12.940736,
+    "lon": 77.517578,
+    "capacity": 20,
+    "cuisine": "French",
+    "features": [
+      "parking"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Physical Bistro",
+    "address": "3441 Brown Manors Suite 968, East Kayla, PW 83786",
+    "lat": 13.07816,
+    "lon": 77.64269,
+    "capacity": 20,
+    "cuisine": "French",
+    "features": [
+      "live_music",
+      "private_room"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "GoodFoods Freeman",
+    "address": "9870 Stevens Trail Suite 893, Lunamouth, NE 03391",
+    "lat": 12.905917,
+    "lon": 77.694288,
+    "capacity": 40,
+    "cuisine": "Indian",
+    "features": []
+  },
+  {
+    "id": 55,
+    "name": "Mind Bistro",
+    "address": "34563 Blair Oval Apt. 641, West Ronald, VT 06645",
+    "lat": 12.990081,
+    "lon": 77.719686,
+    "capacity": 30,
+    "cuisine": "Japanese",
+    "features": []
+  },
+  {
+    "id": 56,
+    "name": "Talk Bistro",
+    "address": "4478 Lindsay Views Apt. 429, Lisaside, ND 70016",
+    "lat": 12.910153,
+    "lon": 77.66661,
+    "capacity": 30,
+    "cuisine": "Korean",
+    "features": [
+      "private_room",
+      "rooftop"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "GoodFoods Johnson",
+    "address": "5285 Baker Corner Apt. 978, Sullivanfort, MD 11843",
+    "lat": 13.1545,
+    "lon": 77.739043,
+    "capacity": 20,
+    "cuisine": "Korean",
+    "features": [
+      "private_room"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Side Bistro",
+    "address": "8404 Michael View Suite 045, South Ann, UT 94289",
+    "lat": 13.077572,
+    "lon": 77.462709,
+    "capacity": 40,
+    "cuisine": "American",
+    "features": [
+      "parking",
+      "rooftop"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "White Bistro",
+    "address": "0337 Matthew Street Apt. 621, West Hannah, TX 34153",
+    "lat": 12.99847,
+    "lon": 77.724531,
+    "capacity": 30,
+    "cuisine": "French",
+    "features": []
+  },
+  {
+    "id": 60,
+    "name": "GoodFoods Holmes",
+    "address": "2563 Black Overpass, Lake Kelly, WI 01095",
+    "lat": 13.051555,
+    "lon": 77.637467,
+    "capacity": 30,
+    "cuisine": "Mediterranean",
+    "features": [
+      "live_music",
+      "outdoor"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "GoodFoods Lynn",
+    "address": "66953 Douglas Shoals, West Charles, DC 52481",
+    "lat": 13.195825,
+    "lon": 77.495658,
+    "capacity": 60,
+    "cuisine": "French",
+    "features": [
+      "pet_friendly",
+      "private_room"
+    ]
+  },
+  {
+    "id": 62,
+    "name": "GoodFoods Mata",
+    "address": "99605 Mark Loop, Jonesland, GU 84691",
+    "lat": 13.038007,
+    "lon": 77.649595,
+    "capacity": 40,
+    "cuisine": "French",
+    "features": [
+      "pet_friendly",
+      "private_room"
+    ]
+  },
+  {
+    "id": 63,
+    "name": "White Bistro",
+    "address": "2884 Jonathan Trail Apt. 290, Lake Robertland, OR 76676",
+    "lat": 12.966519,
+    "lon": 77.474214,
+    "capacity": 200,
+    "cuisine": "Mediterranean",
+    "features": [
+      "rooftop",
+      "pet_friendly"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "GoodFoods Zimmerman",
+    "address": "006 Zachary Street Apt. 558, Floresside, NE 78095",
+    "lat": 13.129491,
+    "lon": 77.454721,
+    "capacity": 120,
+    "cuisine": "Japanese",
+    "features": [
+      "private_room"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "GoodFoods Benjamin",
+    "address": "77729 Chad Ridges Apt. 023, Summersborough, WY 16498",
+    "lat": 12.969112,
+    "lon": 77.5983,
+    "capacity": 200,
+    "cuisine": "Mexican",
+    "features": [
+      "pet_friendly",
+      "live_music"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "GoodFoods Bennett",
+    "address": "PSC 1146, Box 5855, APO AP 79587",
+    "lat": 12.934121,
+    "lon": 77.73515,
+    "capacity": 80,
+    "cuisine": "French",
+    "features": [
+      "outdoor"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "GoodFoods Ross",
+    "address": "7224 Webster Valleys, Port Shannonside, AK 73201",
+    "lat": 13.127847,
+    "lon": 77.495596,
+    "capacity": 80,
+    "cuisine": "Mexican",
+    "features": []
+  },
+  {
+    "id": 68,
+    "name": "GoodFoods Clark",
+    "address": "10982 Carly Court, East Kennethberg, TX 51224",
+    "lat": 13.107405,
+    "lon": 77.708963,
+    "capacity": 200,
+    "cuisine": "Chinese",
+    "features": []
+  },
+  {
+    "id": 69,
+    "name": "GoodFoods Kent",
+    "address": "60730 Melissa Fork, Christopherberg, HI 26957",
+    "lat": 12.977031,
+    "lon": 77.713555,
+    "capacity": 120,
+    "cuisine": "French",
+    "features": [
+      "outdoor",
+      "pet_friendly"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "GoodFoods Adams",
+    "address": "PSC 9953, Box 1145, APO AE 67051",
+    "lat": 13.058352,
+    "lon": 77.6057,
+    "capacity": 200,
+    "cuisine": "Thai",
+    "features": []
+  },
+  {
+    "id": 71,
+    "name": "GoodFoods Mack",
+    "address": "378 Ryan Park Apt. 437, North Daniel, UT 99488",
+    "lat": 13.026748,
+    "lon": 77.534361,
+    "capacity": 200,
+    "cuisine": "Chinese",
+    "features": [
+      "parking"
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Paper Bistro",
+    "address": "31842 Lisa Isle, Lake Stephanietown, SD 89562",
+    "lat": 12.991035,
+    "lon": 77.694957,
+    "capacity": 200,
+    "cuisine": "Mexican",
+    "features": [
+      "private_room"
+    ]
+  },
+  {
+    "id": 73,
+    "name": "GoodFoods Griffith",
+    "address": "919 Mallory Flat, Lawsonbury, AK 81354",
+    "lat": 12.977527,
+    "lon": 77.603753,
+    "capacity": 120,
+    "cuisine": "Chinese",
+    "features": []
+  },
+  {
+    "id": 74,
+    "name": "GoodFoods Morrison",
+    "address": "0253 Jack Manor, Bradleyview, PA 71565",
+    "lat": 12.950036,
+    "lon": 77.543792,
+    "capacity": 120,
+    "cuisine": "Indian",
+    "features": [
+      "parking"
+    ]
+  },
+  {
+    "id": 75,
+    "name": "GoodFoods Hanna",
+    "address": "53331 Reid Park, South Toddview, VA 14230",
+    "lat": 13.003036,
+    "lon": 77.654562,
+    "capacity": 80,
+    "cuisine": "Mexican",
+    "features": []
+  },
+  {
+    "id": 76,
+    "name": "GoodFoods Daniels",
+    "address": "278 Hanson Ways, Lake Jamieview, OH 14359",
+    "lat": 13.094522,
+    "lon": 77.486545,
+    "capacity": 80,
+    "cuisine": "Chinese",
+    "features": [
+      "rooftop"
+    ]
+  },
+  {
+    "id": 77,
+    "name": "GoodFoods Watts",
+    "address": "703 Hamilton Cove Apt. 637, Perryside, DE 45988",
+    "lat": 13.061257,
+    "lon": 77.617357,
+    "capacity": 20,
+    "cuisine": "Mediterranean",
+    "features": [
+      "parking"
+    ]
+  },
+  {
+    "id": 78,
+    "name": "GoodFoods Zhang",
+    "address": "549 Williams Crossroad, Port Tracyfurt, IL 52301",
+    "lat": 12.950216,
+    "lon": 77.500868,
+    "capacity": 20,
+    "cuisine": "Mediterranean",
+    "features": []
+  },
+  {
+    "id": 79,
+    "name": "GoodFoods Mayer",
+    "address": "699 Timothy Forge Apt. 946, Glennburgh, UT 59401",
+    "lat": 13.10191,
+    "lon": 77.646386,
+    "capacity": 20,
+    "cuisine": "Thai",
+    "features": [
+      "live_music",
+      "rooftop"
+    ]
+  },
+  {
+    "id": 80,
+    "name": "GoodFoods Carroll",
+    "address": "10239 Kennedy Centers Apt. 800, Mooreport, HI 57204",
+    "lat": 13.105897,
+    "lon": 77.690066,
+    "capacity": 20,
+    "cuisine": "Thai",
+    "features": []
+  }
+]
