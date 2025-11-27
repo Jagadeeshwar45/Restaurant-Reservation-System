@@ -18,16 +18,7 @@ from reservations import (
 from tools import TOOL_SPECS
 
 
-
 def parse_llm_response(text: str) -> Dict[str, Any]:
-    """
-    Parse the LLM's MCP-style response into a structured dict with 'intent' and 'params'.
-
-    The LLM is expected to return ONLY a single JSON object.
-
-    Returns:
-        {"intent": <tool_name>, "params": {...}} or a clarify object if parsing fails.
-    """
     if not text or not isinstance(text, str):
         print("Error: Empty or invalid response from LLM")
         return {
@@ -40,7 +31,6 @@ def parse_llm_response(text: str) -> Dict[str, Any]:
     text = text.strip()
     print(f"Parsing LLM response (first 200 chars): {text[:200]!r}")
 
-    # Try full JSON parse
     try:
         result = json.loads(text)
         if isinstance(result, dict) and "intent" in result:
@@ -48,7 +38,6 @@ def parse_llm_response(text: str) -> Dict[str, Any]:
     except json.JSONDecodeError:
         pass
 
-    # Try to extract JSON substring
     try:
         start = text.find("{")
         end = text.rfind("}") + 1
@@ -62,7 +51,6 @@ def parse_llm_response(text: str) -> Dict[str, Any]:
         print(f"Unexpected error parsing LLM response: {e}")
         traceback.print_exc()
 
-    # Fallback
     return {
         "intent": "clarify",
         "params": {
@@ -76,27 +64,17 @@ def parse_llm_response(text: str) -> Dict[str, Any]:
 
 
 def resolve_reservation_datetime(user_text: str, dt_text: str | None) -> datetime:
-    """
-    Resolve the reservation datetime.
-    Priority:
-      1) If user says 'tomorrow', 'today', etc. → compute from user_text
-      2) Else, if dt_text present → parse with dateutil
-      3) Fallback: today at 7pm
-    """
     text = user_text.lower()
     now = datetime.now()
 
-    # If user explicitly says 'tomorrow' or 'today', compute relative to now
     if "tomorrow" in text or "today" in text or "tonight" in text:
         base = now
         if "tomorrow" in text:
             base = now + timedelta(days=1)
 
-        # default values
         hour = 19
         minute = 0
 
-        # patterns: "7:30pm", "7:30 pm"
         m = re.search(r"(\d{1,2})\s*[:\.]\s*(\d{2})\s*(am|pm)?", text)
         if m:
             hour = int(m.group(1))
@@ -107,7 +85,6 @@ def resolve_reservation_datetime(user_text: str, dt_text: str | None) -> datetim
             elif ampm == "am" and hour == 12:
                 hour = 0
         else:
-            # patterns: "7pm", "7 pm"
             m = re.search(r"\b(\d{1,2})\s*(am|pm)\b", text)
             if m:
                 hour = int(m.group(1))
@@ -117,7 +94,6 @@ def resolve_reservation_datetime(user_text: str, dt_text: str | None) -> datetim
                 elif ampm == "am" and hour == 12:
                     hour = 0
             else:
-                # bare hour like "at 7"
                 m = re.search(r"\bat\s+(\d{1,2})\b", text)
                 if m:
                     h = int(m.group(1))
@@ -126,24 +102,16 @@ def resolve_reservation_datetime(user_text: str, dt_text: str | None) -> datetim
 
         return base.replace(hour=hour, minute=minute, second=0, microsecond=0)
 
-    # If LLM gave us something like "2025-11-26T19:00:00"
     if dt_text:
         try:
             return parser.parse(dt_text, default=now)
         except Exception:
             pass
 
-    # Fallback: today at 7pm
     return now.replace(hour=19, minute=0, second=0, microsecond=0)
 
 
 def handle_user_message(user_text: str) -> str:
-    """
-    Main agent entrypoint.
-    - Builds MCP-style system prompt (with tool definitions).
-    - Calls LLM to get {intent, params}.
-    - Executes the selected tool and returns a user-facing message.
-    """
     try:
         system_prompt = build_system_prompt()
         raw = call_llm_json(system_prompt, user_text)
@@ -154,14 +122,12 @@ def handle_user_message(user_text: str) -> str:
 
         print(f"LLM chose intent/tool: {intent}, params: {params}")
 
-        # Validate intent exists in our MCP tool registry
         if intent not in TOOL_SPECS:
             return (
                 "I couldn't match your request to a known action. "
                 "Please try again with a clearer request."
             )
 
-        # === Tool: search_restaurants ===
         if intent == "search_restaurants":
             cuisine = params.get("cuisine")
             seats = params.get("seats")
@@ -181,35 +147,34 @@ def handle_user_message(user_text: str) -> str:
             ]
             return "Here are some options:\n" + "\n".join(lines)
 
-        # === Tool: create_reservation ===
+        # ==============================
+        # UPDATED create_reservation LOGIC
+        # ==============================
         if intent == "create_reservation":
             seats = int(params.get("seats", 2))
             cuisine = params.get("cuisine")
-            rid = params.get("restaurant_id")
+                        # Always try catch restaurant name first even if LLM provides restaurant_id
+            from reservations import RESTAURANTS
+            lowered = user_text.lower()
 
-    # If restaurant_id is not explicitly given, find best matching restaurant
-            if rid is None:
-        # Search by cuisine + minimum seat capacity
-                candidates = search_restaurants(cuisine=cuisine, seats=seats)
+            name_matches = [
+                r for r in RESTAURANTS.values()
+                if r.name.lower() in lowered
+            ]
 
-        # Sort candidates by closest capacity match (optional heuristic)
-                candidates = sorted(candidates, key=lambda r: r.capacity)
-
-                if not candidates:
-            # fallback: any restaurant with enough capacity
-                    candidates = search_restaurants(seats=seats)
+            if name_matches:
+                rid = name_matches[0].id
+            else:
+                # fallback to provided restaurant_id
+                if params.get("restaurant_id") is not None:
+                    rid = int(params.get("restaurant_id"))
+                else:
+                    candidates = search_restaurants(cuisine=cuisine, seats=seats)
+                    candidates = sorted(candidates, key=lambda r: r.capacity)
                     if not candidates:
                         return "No restaurant found that can handle your seating request."
+                    rid = candidates[0].id
 
-                    alt = candidates[0]
-                    return (
-                        f"No {cuisine} restaurants with enough capacity. "
-                        f"Would you like to book at {alt.name} ({alt.cuisine}) instead?"
-                    )
-
-                rid = candidates[0].id  # best match
-            else:
-                rid = int(rid)
 
             dt_text = params.get("datetime")
             dt = resolve_reservation_datetime(user_text, dt_text)
@@ -217,7 +182,6 @@ def handle_user_message(user_text: str) -> str:
             phone = params.get("phone")
             email = params.get("email")
 
-    # Check availability
             if not check_availability(rid, dt, seats):
                 return "That time is fully booked. Would you like alternate times or restaurants?"
 
@@ -236,12 +200,8 @@ def handle_user_message(user_text: str) -> str:
                 "🍽 Thank you for choosing **GoodFoods**!"
             )
 
-
-                # === Tool: cancel_reservation (by restaurant_id) ===
         if intent == "cancel_reservation":
-            rest_code = params.get("reservation_id")  # using existing param for Restaurant Code
-
-            # If missing, try extracting from raw input
+            rest_code = params.get("reservation_id")
             if not rest_code and user_text:
                 match = re.search(r'(?:id[=: ]*|#)?(\d+)', user_text)
                 if match:
@@ -268,9 +228,8 @@ def handle_user_message(user_text: str) -> str:
                 rest_code = int(rest_code)
                 reservations = list_reservations()
 
-                # Find latest active reservation for that restaurant_id
                 target = None
-                for r in reversed(reservations):  # reverse = latest booking first
+                for r in reversed(reservations):
                     if r["restaurant_id"] == rest_code and r["status"] == "confirmed":
                         target = r
                         break
@@ -296,8 +255,6 @@ def handle_user_message(user_text: str) -> str:
             except ValueError:
                 return "❌ Invalid code. Please say something like: cancel reservation 16"
 
-
-        # === Tool: list_reservations ===
         if intent == "list_reservations":
             rows = list_reservations()
             if not rows:
@@ -309,12 +266,10 @@ def handle_user_message(user_text: str) -> str:
             ]
             return "\n".join(lines)
 
-        # === Tool: clarify ===
         if intent == "clarify":
             q = params.get("question", "Could you clarify your request?")
             return q
 
-        # Fallback – should not typically hit this if TOOL_SPECS is aligned
         return (
             "I understood your message but couldn't map it to a supported action. "
             "Please try again, for example: 'Book a table for 4 at 7pm tomorrow'."
