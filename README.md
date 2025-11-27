@@ -4,7 +4,7 @@ AI-powered conversational restaurant reservation system using Llama-3.3-8B, Stre
 
 ## 🎥 Demo Video
 
-[🔗 Video Walk Through](https://youtu.be/XXXXXXXXXX)
+[🔗 Video Walk Through](https://drive.google.com/file/d/1MwXyxIzg6pcVbZZ2sfGtgrMISx54SbDu/view?usp=sharing)
 
 ## Documentation
 
@@ -12,7 +12,7 @@ AI-powered conversational restaurant reservation system using Llama-3.3-8B, Stre
 
 ## 🚀 Project Overview
 
-GoodFoods optimizes reservation flow across multiple restaurant locations—improving customer experience, maximizing seating efficiency, and boosting profitability through intelligent automation.
+GoodFoods Reservation System optimizes reservation flow across multiple restaurant locations—improving customer experience, maximizing seating efficiency, and boosting profitability through intelligent automation.
 
 ## ✨ Key Capabilities
 
@@ -69,10 +69,11 @@ Never include text outside JSON.
 ### 💡 Recommendation Logic
 
 **Ranking Priority:**
-1. Cuisine match
-2. Minimum seat capacity
-3. Restaurant features (outdoor, rooftop, parking, live music)
-4. Closest capacity fit
+1. Restaurant match
+2. Cuisine match
+3. Minimum seat capacity
+4. Restaurant features (outdoor, rooftop, parking, live music)
+5. Closest capacity fit
 
 **Fallback:**
 > "No Italian restaurant for 6 people — would you like GoodFoods Rivera (Mexican) instead?"
