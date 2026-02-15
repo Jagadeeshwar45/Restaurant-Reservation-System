@@ -2,10 +2,6 @@
 
 AI-powered conversational restaurant reservation system using Llama-3.3-8B, Streamlit, SQLite, and MCP-style agentic tool calling architecture.
 
-## 🎥 Demo Video
-
-[🔗 Video Walk Through](https://drive.google.com/file/d/1MwXyxIzg6pcVbZZ2sfGtgrMISx54SbDu/view?usp=sharing)
-
 ## Documentation
 
 [🔗 Use Case Document](https://docs.google.com/document/d/1Jhk1tLEtI55gZOy5Y9PQDEDuzmqGPeUv3ys4IHLubz8/edit?usp=sharing)
