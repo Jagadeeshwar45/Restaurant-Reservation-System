@@ -2,7 +2,7 @@
 
 AI-powered conversational restaurant reservation system using Llama-3.3-8B, Streamlit, SQLite, and MCP-style agentic tool calling architecture.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](http://localhost:8501/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)]([http://localhost:8501](https://jagadeeshwar45-restaurant-reservation-s-appstreamlit-app-0ppi1h.streamlit.app/)/)
 
 ## Documentation
 
