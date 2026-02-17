@@ -153,7 +153,7 @@ def handle_user_message(user_text: str) -> str:
         if intent == "create_reservation":
             seats = int(params.get("seats", 2))
             cuisine = params.get("cuisine")
-                        # Always try catch restaurant name first even if LLM provides restaurant_id
+            # Always try catch restaurant name first even if LLM provides restaurant_id
             from reservations import RESTAURANTS
             lowered = user_text.lower()
 

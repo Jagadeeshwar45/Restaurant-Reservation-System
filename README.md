@@ -26,7 +26,7 @@ GoodFoods Reservation System optimizes reservation flow across multiple restaura
 ```mermaid
 flowchart TD
     A[Streamlit UI] --> B[Agent]
-    B --> C[Llama-3.3-8B Model]
+    B --> C[GROQ]
     C --> D[MCP Tool Router]
     D --> E[Reservation Tools]
     E --> F[SQLite DB]
@@ -86,7 +86,7 @@ Never include text outside JSON.
 | llama-cpp-python | latest |
 | Streamlit | latest |
 | SQLite | included |
-| Llama-3.3-8B GGUF model | Local |
+| GROQ | API |
 
 ### 📁 Installation
 
@@ -96,18 +96,14 @@ cd Restaurant-Reservation-System
 pip install -r requirements.txt
 ```
 
-### 📍 Model Placement
-
-Place your model at:
-```
-/models/llama-3.3-8b-instruct.Q4_K_M.gguf
-```
 
 ### ⚙ Environment Variables
 
+## 🔑 Groq API Setup
+
 Create `.env` file:
 ```env
-LLAMA_CPP_MODEL_PATH=/absolute/path/to/model.gguf
+GROQ_API_KEY=your_groq_key
 ```
 
 ### ▶ Run Project
